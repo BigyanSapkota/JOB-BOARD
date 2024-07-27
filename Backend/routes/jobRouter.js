@@ -1,5 +1,5 @@
 import express from "express"
-import {deleteJob, getAllJobs, getmyJobs, postJob, updateJob} from "../controller/jobController.js"
+import {deleteJob, getAllJobs, getmyJobs, getSinglejob, postJob, updateJob} from "../controller/jobController.js"
 import {isAuthorized} from "../middleware/auth.js"
 
 
@@ -10,6 +10,8 @@ router.post("/post",isAuthorized,postJob)
 router.get("/getmyjobs",isAuthorized,getmyJobs)
 router.put("/update/:id",isAuthorized,updateJob)
 router.delete("/delete/:id",isAuthorized,deleteJob)
+router.get("/:id",isAuthorized,getSinglejob)
+
 
 
 export default router
