@@ -1,4 +1,4 @@
-import {} from "../middleware/catchAsyncError.js";
+ import {} from "../middleware/catchAsyncError.js";
 import ErrorHandler from "../middleware/error.js";
 import { User } from "../models/userSchema.js";
 import { catchAsyncError } from "../middleware/catchAsyncError.js";
